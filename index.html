@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theme Changer</title>
+  </head>
+
+  <style>
+    .container {
+      margin: 10px 20px;
+    }
+    .theme {
+      height: 50px;
+      margin-left: 5px;
+      
+      padding: 10px;
+      background-color: plum;
+    }
+
+    .active{
+        border: 2px solid black;
+      border-radius: 5px;
+    }
+
+    .para{
+        font-size: larger;
+    }
+
+    .theme-light{
+        background-color: #f4a261;
+        color: #000;
+    }
+
+    .theme-dark{
+        background-color: #000;
+        color: #fff;
+    }
+  </style>
+
+
+  <body id="body">
+    <div class="container">
+      <img src="night-mode.png" class="theme" id="dark" onclick="darkmode()"/>
+      <img src="day-mode.png" class="theme active" id="light" onclick="lightmode()"/>
+    </div>
+
+    <h1>This Is Just a Normal Text</h1>
+
+    <p class="para">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aliquam distinctio unde doloremque et odit enim placeat cupiditate sit tenetur, quia quaerat hic corporis consequatur itaque ratione magnam ducimus ullam!Lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus adipisci error, alias nisi mollitia eveniet corrupti sed ex assumenda repellat odit maiores debitis vero facilis laborum libero vel animi recusandae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi dolore porro amet unde quae sit soluta. Saepe eaque earum quos esse nihil nostrum unde, pariatur, animi praesentium labore reiciendis. Asperiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla praesentium ducimus, accusamus minus nesciunt. Quo, fugiat qui aut temporibus optio, blanditiis, beatae suscipit dolore sapiente eligendi in laboriosam soluta.
+      Illo, perspiciatis sed laborum nobis hic quod. Nemo fugiat molestias non. Illo autem praesentium cumque voluptatibus perferendis expedita odit reiciendis ipsam, porro mollitia quisquam doloribus alias repudiandae ducimus ut. Debitis!
+      Dignissimos ullam mollitia magni quod id libero labore quos vitae aut tempora? Quod nesciunt corporis harum iure reiciendis neque, labore nam voluptas quia ut quasi inventore, hic ea quam iste.
+      Impedit ipsam, aperiam, cumque quisquam optio accusantium officiis dignissimos voluptate at voluptates hic repellat, natus assumenda nam fuga repudiandae reiciendis eos accusamus labore! Officia deserunt non similique exercitationem perferendis beatae.
+      Est, eveniet? Nostrum dolorem consectetur blanditiis. Voluptate asperiores laudantium veritatis modi rerum sunt consequatur nihil deserunt? Fugit nisi sequi modi maiores? Quaerat, odio est? In inventore esse rerum nam incidunt!
+    </p>
+
+    <script>
+        function darkmode(){
+            const imgdark = document.getElementById("dark");
+            imgdark.classList.add("active");
+
+            const imglight = document.getElementById("light");
+            imglight.classList.remove("active");
+
+            const body_element = document.getElementById("body");
+            body_element.className = "theme-dark"
+        }
+
+        function lightmode(){
+            const imgdark = document.getElementById("dark");
+            imgdark.classList.remove("active");
+
+            const imglight = document.getElementById("light");
+            imglight.classList.add("active");
+
+            const body_element = document.getElementById("body");
+            body_element.className = "theme-light"
+        }
+    </script>
+  </body>
+</html>
